@@ -1,0 +1,1 @@
+Clean static template branch. Main was not changed.
