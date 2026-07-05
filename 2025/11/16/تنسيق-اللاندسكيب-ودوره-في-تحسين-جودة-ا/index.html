@@ -227,6 +227,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </style>
 
+
+<style id="zahraty-mobile-menu-style">
+    /* Zahraty Mobile Menu Reproduction */
+    @media (max-width: 1024px) {
+        .elementor-menu-toggle {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 45px !important;
+            height: 45px !important;
+            background-color: #291686 !important; /* لون خلفية الزر */
+            border-radius: 5px !important;
+            padding: 0 !important;
+            margin-right: auto !important;
+            cursor: pointer !important;
+            border: none !important;
+            position: relative !important;
+            z-index: 10001 !important;
+        }
+        .elementor-menu-toggle svg {
+            width: 25px !important;
+            height: 25px !important;
+            fill: #ffffff !important;
+        }
+        .elementor-nav-menu--dropdown {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100vh !important;
+            background-color: #ffffff !important;
+            z-index: 10000 !important;
+            display: none; /* سيتم التحكم به عبر JS */
+            flex-direction: column !important;
+            padding-top: 80px !important;
+            overflow-y: auto !important;
+        }
+        .elementor-nav-menu--dropdown.show {
+            display: flex !important;
+        }
+        .elementor-nav-menu--dropdown ul {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            list-style: none !important;
+        }
+        .elementor-nav-menu--dropdown li {
+            width: 100% !important;
+            border-bottom: 1px solid #eee !important;
+        }
+        .elementor-nav-menu--dropdown li a {
+            display: block !important;
+            padding: 20px 30px !important;
+            color: #333 !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            text-align: right !important;
+            text-decoration: none !important;
+        }
+        .elementor-nav-menu--dropdown li a:hover {
+            background-color: #f8f8f8 !important;
+            color: #291686 !important;
+        }
+        /* إخفاء القائمة الأصلية عند فتح القائمة المتنقلة */
+        body.menu-open {
+            overflow: hidden !important;
+        }
+    }
+</style>
 </head>
 
 <body data-rsssl=1 class="rtl wp-singular post-template-default single single-post postid-243 single-format-standard wp-embed-responsive wp-theme-kadence footer-on-bottom hide-focus-outline link-style-standard content-title-style-normal content-width-narrow content-style-boxed content-vertical-padding-show non-transparent-header mobile-non-transparent-header kadence-elementor-colors elementor-default elementor-kit-11 elementor-page-65">
@@ -696,7 +767,35 @@ var ekit_config = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"d1462102eb"};
 //# sourceURL=elementskit-elementor-js-extra
 </script>
 <script id="elementskit-elementor-js" src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js" data-rocket-defer defer></script>
-<script>var rocket_beacon_data = {"ajax_url":"https:\/\/zahraty.com\/wp-admin\/admin-ajax.php","nonce":"0b41bde0da","url":"https:\/\/zahraty.com\/2025\/11\/16\/%d8%aa%d9%86%d8%b3%d9%8a%d9%82-%d8%a7%d9%84%d9%84%d8%a7%d9%86%d8%af%d8%b3%d9%83%d9%8a%d8%a8-%d9%88%d8%af%d9%88%d8%b1%d9%87-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%ac%d9%88%d8%af%d8%a9-%d8%a7","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/zahraty.com\/wp-admin\/admin-ajax.php","nonce":"0b41bde0da","url":"https:\/\/zahraty.com\/2025\/11\/16\/%d8%aa%d9%86%d8%b3%d9%8a%d9%82-%d8%a7%d9%84%d9%84%d8%a7%d9%86%d8%af%d8%b3%d9%83%d9%8a%d8%a8-%d9%88%d8%af%d9%88%d8%b1%d9%87-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%ac%d9%88%d8%af%d8%a9-%d8%a7","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script>
+<script id="zahraty-mobile-menu-js">
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('.elementor-menu-toggle');
+    const navMenu = document.querySelector('.elementor-nav-menu--dropdown');
+    
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+            
+            // تغيير أيقونة القائمة (اختياري)
+            const isOpen = navMenu.classList.contains('show');
+            // هنا يمكنك إضافة منطق لتغيير الأيقونة من hamburger إلى close
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const menuLinks = navMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('show');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+});
+</script>
+</body>
 </html>
 
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
