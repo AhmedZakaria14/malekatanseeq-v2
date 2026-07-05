@@ -226,72 +226,142 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 
 
-<style id="zahraty-mobile-menu-style">
-    /* Zahraty Mobile Menu Reproduction */
+
+
+<style id="manus-recommended-menu-style">
+    /* Improved Mobile Menu by Manus */
     @media (max-width: 1024px) {
+        /* Hide default desktop menu */
+        .elementor-nav-menu--main {
+            display: none !important;
+        }
+
+        /* Styling the Toggle Button */
         .elementor-menu-toggle {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            width: 45px !important;
-            height: 45px !important;
-            background-color: #291686 !important; /* لون خلفية الزر */
-            border-radius: 5px !important;
-            padding: 0 !important;
-            margin-right: auto !important;
+            width: 40px !important;
+            height: 40px !important;
+            background-color: #291686 !important;
+            border-radius: 4px !important;
             cursor: pointer !important;
-            border: none !important;
             position: relative !important;
-            z-index: 10001 !important;
+            z-index: 10002 !important;
+            border: none !important;
         }
+        
         .elementor-menu-toggle svg {
-            width: 25px !important;
-            height: 25px !important;
             fill: #ffffff !important;
+            width: 22px !important;
+            height: 22px !important;
         }
+
+        /* The Sidebar Menu Container */
+        .elementor-nav-menu--dropdown.manus-mobile-active {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            transform: translateX(0) !important;
+        }
+
         .elementor-nav-menu--dropdown {
+            display: block !important;
             position: fixed !important;
             top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
+            right: 0 !important;
+            width: 280px !important;
             height: 100vh !important;
             background-color: #ffffff !important;
-            z-index: 10000 !important;
-            display: none; /* سيتم التحكم به عبر JS */
-            flex-direction: column !important;
-            padding-top: 80px !important;
+            z-index: 10001 !important;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+            transition: transform 0.3s ease-in-out !important;
+            transform: translateX(100%) !important; /* Slide out to the right */
+            padding: 70px 0 20px 0 !important;
             overflow-y: auto !important;
+            direction: rtl !important;
         }
-        .elementor-nav-menu--dropdown.show {
-            display: flex !important;
-        }
-        .elementor-nav-menu--dropdown ul {
+
+        /* Menu Items */
+        .elementor-nav-menu--dropdown ul.elementor-nav-menu {
             display: flex !important;
             flex-direction: column !important;
-            width: 100% !important;
             padding: 0 !important;
             margin: 0 !important;
             list-style: none !important;
         }
-        .elementor-nav-menu--dropdown li {
+
+        .elementor-nav-menu--dropdown li.menu-item {
             width: 100% !important;
-            border-bottom: 1px solid #eee !important;
+            border-bottom: 1px solid #f0f0f0 !important;
+            position: relative !important;
         }
-        .elementor-nav-menu--dropdown li a {
+
+        .elementor-nav-menu--dropdown li.menu-item a {
             display: block !important;
-            padding: 20px 30px !important;
-            color: #333 !important;
-            font-size: 18px !important;
+            padding: 15px 20px !important;
+            color: #333333 !important;
+            font-size: 16px !important;
             font-weight: 600 !important;
-            text-align: right !important;
             text-decoration: none !important;
+            text-align: right !important;
+            transition: all 0.2s !important;
         }
-        .elementor-nav-menu--dropdown li a:hover {
-            background-color: #f8f8f8 !important;
+
+        .elementor-nav-menu--dropdown li.menu-item a:hover {
+            background-color: #f9f9f9 !important;
             color: #291686 !important;
         }
-        /* إخفاء القائمة الأصلية عند فتح القائمة المتنقلة */
-        body.menu-open {
+
+        /* Dropdown / Sub-menu Handling */
+        .elementor-nav-menu--dropdown .sub-menu {
+            display: none !important; /* Hidden by default */
+            background-color: #fcfcfc !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+
+        .elementor-nav-menu--dropdown .sub-menu.open {
+            display: block !important;
+        }
+
+        .elementor-nav-menu--dropdown .sub-menu li a {
+            padding-right: 40px !important;
+            font-size: 15px !important;
+            font-weight: 400 !important;
+        }
+
+        /* Indicator for Dropdowns */
+        .menu-item-has-children > a::after {
+            content: "BC" !important;
+            font-size: 10px !important;
+            margin-right: 8px !important;
+            display: inline-block !important;
+            transition: transform 0.2s !important;
+            float: left !important;
+        }
+
+        .menu-item-has-children.active > a::after {
+            transform: rotate(180deg) !important;
+        }
+
+        /* Overlay background */
+        .manus-menu-overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: rgba(0,0,0,0.5) !important;
+            z-index: 10000 !important;
+            display: none !important;
+        }
+        
+        .manus-menu-overlay.show {
+            display: block !important;
+        }
+
+        body.manus-no-scroll {
             overflow: hidden !important;
         }
     }
@@ -722,28 +792,56 @@ var ekit_config = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"fba5024678"};
 </script>
 <script id="elementskit-elementor-js" src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js" data-rocket-defer defer></script>
 
-<script id="zahraty-mobile-menu-js">
+
+
+<script id="manus-recommended-menu-js">
 document.addEventListener('DOMContentLoaded', function() {
     const toggleBtn = document.querySelector('.elementor-menu-toggle');
-    const navMenu = document.querySelector('.elementor-nav-menu--dropdown');
+    const navMenu = document.querySelector('nav.elementor-nav-menu--dropdown');
     
+    // Create overlay if not exists
+    let overlay = document.querySelector('.manus-menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'manus-menu-overlay';
+        document.body.appendChild(overlay);
+    }
+
     if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            navMenu.classList.toggle('show');
-            document.body.classList.toggle('menu-open');
+        // Function to toggle menu
+        const toggleMenu = (e) => {
+            if (e) e.preventDefault();
+            const isActive = navMenu.classList.toggle('manus-mobile-active');
+            overlay.classList.toggle('show', isActive);
+            document.body.classList.toggle('manus-no-scroll', isActive);
             
-            // تغيير أيقونة القائمة (اختياري)
-            const isOpen = navMenu.classList.contains('show');
-            // هنا يمكنك إضافة منطق لتغيير الأيقونة من hamburger إلى close
+            // Change toggle icon color or shape if needed
+        };
+
+        toggleBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Handle Sub-menus (Dropdowns)
+        const parentItems = navMenu.querySelectorAll('.menu-item-has-children > a');
+        parentItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                const subMenu = this.nextElementSibling;
+                if (subMenu && subMenu.classList.contains('sub-menu')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const isOpen = subMenu.classList.toggle('open');
+                    this.parentElement.classList.toggle('active', isOpen);
+                }
+            });
         });
-        
-        // إغلاق القائمة عند النقر على رابط
-        const menuLinks = navMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('show');
-                document.body.classList.remove('menu-open');
+
+        // Close menu on link click (if not a parent item)
+        const allLinks = navMenu.querySelectorAll('li.menu-item:not(.menu-item-has-children) > a');
+        allLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('manus-mobile-active');
+                overlay.classList.remove('show');
+                document.body.classList.remove('manus-no-scroll');
             });
         });
     }
