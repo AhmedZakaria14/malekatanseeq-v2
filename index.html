@@ -252,131 +252,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon" href="/wp-content/uploads/2026/07/logo-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/07/logo-270x270.png" />
 <meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_defer_js wpr_preconnect_external_domains wpr_oci wpr_minify_css wpr_desktop" />
-	<style id="custom-menu-fix">
-	/* Mobile Menu Icon Fix - Comprehensive Solution */
-	/* Ensure the toggle button is always visible on mobile devices */
-	@media (max-width: 1024px) {
-	    .elementor-menu-toggle {
-	        display: flex !important;
-	        justify-content: center !important;
-	        align-items: center !important;
-	        background-color: transparent !important;
-	        border: none !important;
-	        width: auto !important;
-	        height: auto !important;
-	        padding: 8px 12px !important;
-	        cursor: pointer !important;
-	        z-index: 1000 !important;
-	        position: relative !important;
-	    }
-
-	    /* Ensure SVG icons are visible */
-	    .elementor-menu-toggle svg {
-	        display: block !important;
-	        width: 24px !important;
-	        height: 24px !important;
-	        fill: white !important;
-	        stroke: white !important;
-	    }
-
-	    /* Hide the close icon by default, show it when menu is open */
-	    .elementor-menu-toggle .elementor-menu-toggle__icon--close {
-	        display: none !important;
-	    }
-
-	    /* Show close icon when menu is open */
-	    .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--close {
-	        display: block !important;
-	    }
-
-	    /* Hide open icon when menu is open */
-	    .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--open {
-	        display: none !important;
-	    }
-
-	    /* Ensure the menu toggle is not hidden by any parent container */
-	    .elementor-nav-menu__container {
-	        position: relative !important;
-	    }
-
-	    /* Make sure the toggle button container doesn't hide the toggle */
-	    .elementor-widget-nav-menu {
-	        display: flex !important;
-	        align-items: center !important;
-	        justify-content: flex-end !important;
-	    }
-
-	    /* Dropdown menu styling */
-	    .elementor-nav-menu--dropdown {
-	        width: 100% !important;
-	        max-width: 100% !important;
-	        left: 0 !important;
-	        right: 0 !important;
-	        position: fixed !important;
-	        background-color: #fff !important;
-	        box-shadow: 0px 8px 16px rgba(0,0,0,0.1) !important;
-	        z-index: 999 !important;
-	        padding: 0 !important;
-	        margin-left: 0 !important;
-	        top: auto !important;
-	    }
-
-	    .elementor-nav-menu--dropdown ul {
-	        display: block !important;
-	        width: 100% !important;
-	        padding: 0 !important;
-	        margin: 0 !important;
-	    }
-
-	    .elementor-nav-menu--dropdown li {
-	        width: 100% !important;
-	        border-bottom: 1px solid #f0f0f0 !important;
-	    }
-
-	    .elementor-nav-menu--dropdown a {
-	        padding: 15px 25px !important;
-	        display: block !important;
-	        width: 100% !important;
-	        font-size: 16px !important;
-	        color: #333 !important;
-	        text-align: right !important;
-	        box-sizing: border-box !important;
-	    }
-
-	    .elementor-nav-menu--dropdown .sub-menu {
-	        background-color: #f9f9f9 !important;
-	        padding-right: 20px !important;
-	    }
-
-	    .elementor-nav-menu--dropdown.elementor-nav-menu__container {
-	        background-color: #fff !important;
-	        border-radius: 0 !important;
-	        border-top: 2px solid #291686 !important;
-	    }
-	}
-
-	/* Extra small devices */
-	@media (max-width: 480px) {
-	    .elementor-menu-toggle {
-	        padding: 6px 10px !important;
-	    }
-
-	    .elementor-menu-toggle svg {
-	        width: 20px !important;
-	        height: 20px !important;
-	    }
-
-	    .elementor-nav-menu--dropdown a {
-	        padding: 12px 20px !important;
-	        font-size: 14px !important;
-	    }
-	}
-
-	/* Override Elementor default hiding rule for toggle button */
-	.elementor-widget-nav-menu.elementor-nav-menu--toggle .elementor-menu-toggle {
-	    display: flex !important;
-	}
-	</style>
+<style id="custom-menu-fix">
+/* إصلاح القائمة المنسدلة للجوال - Full Width Hamburger Menu */
+@media (max-width: 1024px) {
+    .elementor-nav-menu--dropdown {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: fixed !important;
+        background-color: #fff !important;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1) !important;
+        z-index: 9999 !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown ul {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown li {
+        width: 100% !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown a {
+        padding: 15px 25px !important;
+        display: block !important;
+        width: 100% !important;
+        font-size: 16px !important;
+        color: #333 !important;
+        text-align: right !important;
+        box-sizing: border-box !important;
+    }
+    
+    .elementor-nav-menu--dropdown .sub-menu {
+        background-color: #f9f9f9 !important;
+        padding-right: 20px !important;
+    }
+    
+    /* جعل زر القائمة (الهمبرجر) متناسقاً */
+    .elementor-menu-toggle {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    
+    /* إصلاح خلفية القائمة المنسدلة لتكون مثل الصورة */
+    .elementor-nav-menu--dropdown.elementor-nav-menu__container {
+        background-color: #fff !important;
+        border-radius: 0 !important;
+        border-top: 2px solid #291686 !important;
+    }
+}
+</style>
 
 </head>
 
