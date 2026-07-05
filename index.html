@@ -160,92 +160,92 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						background-image: none !important;
 						}
 					}
-					/* Mobile Menu Fix */
-					@media (max-width: 1024px) {
-						.elementor-menu-toggle {
-							display: flex !important;
-							align-items: center !important;
-							justify-content: center !important;
-							width: 45px !important;
-							height: 45px !important;
-							background-color: #291686 !important; /* matching theme primary color */
-							border-radius: 5px !important;
-							padding: 0 !important;
-							margin-right: auto !important;
-							cursor: pointer !important;
-							border: 1px solid rgba(255,255,255,0.2) !important;
-						}
-						.elementor-menu-toggle i, 
-						.elementor-menu-toggle svg {
-							width: 25px !important;
-							height: 25px !important;
-							font-size: 25px !important;
-							fill: #ffffff !important;
-							color: #ffffff !important;
-						}
-						.elementor-menu-toggle__icon--open {
-							position: relative;
-							display: flex !important;
-							align-items: center !important;
-							justify-content: center !important;
-						}
-						.elementor-menu-toggle__icon--open:before {
-							content: "☰" !important;
-							font-size: 30px !important;
-							color: white !important;
-							display: block !important;
-							font-family: Arial, sans-serif !important;
-						}
-						.ti-menu:before {
-							display: none !important;
-						}
-							/* Mobile Menu Dropdown Styling - Refined */
-							.elementor-nav-menu--dropdown {
-								position: absolute !important;
-								left: 0 !important;
-								right: 0 !important;
-								width: 100vw !important;
-								margin-left: calc(-50vw + 50%) !important;
-								background-color: #ffffff !important;
-								padding: 15px 0 !important;
-								box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-								z-index: 9999 !important;
-								border-top: 2px solid #291686 !important;
-							}
-							.elementor-nav-menu--dropdown ul {
+						/* Mobile Menu Fix - Full Width Hamburger Menu */
+						@media (max-width: 1024px) {
+							.elementor-menu-toggle {
+								display: flex !important;
+								align-items: center !important;
+								justify-content: center !important;
+								width: 45px !important;
+								height: 45px !important;
+								background-color: transparent !important;
+								border-radius: 0px !important;
 								padding: 0 !important;
-								margin: 0 !important;
-								list-style: none !important;
+								margin-right: auto !important;
+								cursor: pointer !important;
+								border: none !important;
 							}
-							.elementor-nav-menu--dropdown .elementor-item,
-							.elementor-nav-menu--dropdown .elementor-sub-item {
+							.elementor-menu-toggle i, 
+							.elementor-menu-toggle svg {
+								width: 28px !important;
+								height: 28px !important;
+								font-size: 28px !important;
+								fill: #ffffff !important;
+								color: #ffffff !important;
+							}
+							.elementor-menu-toggle__icon--open {
+								position: relative;
+								display: flex !important;
+								align-items: center !important;
+								justify-content: center !important;
+							}
+							.elementor-menu-toggle__icon--open:before {
+								content: "" !important;
+								display: none !important;
+							}
+							.ti-menu:before {
 								display: block !important;
-								padding: 15px 25px !important;
-								color: #333333 !important;
-								font-size: 16px !important;
-								font-weight: 500 !important;
-								text-align: right !important;
-								border-bottom: 1px solid #f0f0f0 !important;
-								text-decoration: none !important;
 							}
-							.elementor-nav-menu--dropdown .elementor-item:hover,
-							.elementor-nav-menu--dropdown .elementor-sub-item:hover {
-								background-color: #f9f9f9 !important;
-								color: #291686 !important;
-							}
-							.elementor-nav-menu--dropdown .sub-menu {
-								background-color: #fcfcfc !important;
-								margin: 0 !important;
-							}
-							.elementor-nav-menu--dropdown .sub-menu .elementor-sub-item {
-								padding-right: 45px !important;
-								font-size: 15px !important;
-							}
-							/* Fix for the toggle button position */
-							.elementor-widget-nav-menu {
-								position: static !important;
-							}
-					}
+								/* Mobile Menu Dropdown Styling - Full Width */
+								.elementor-nav-menu--dropdown {
+									position: fixed !important;
+									left: 0 !important;
+									right: 0 !important;
+									top: auto !important;
+									width: 100% !important;
+									margin-left: 0 !important;
+									background-color: #ffffff !important;
+									padding: 0 !important;
+									box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+									z-index: 9999 !important;
+									border-top: 2px solid #291686 !important;
+								}
+								.elementor-nav-menu--dropdown ul {
+									padding: 0 !important;
+									margin: 0 !important;
+									list-style: none !important;
+								}
+								.elementor-nav-menu--dropdown .elementor-item,
+								.elementor-nav-menu--dropdown .elementor-sub-item {
+									display: block !important;
+									padding: 15px 25px !important;
+									color: #333333 !important;
+									font-size: 16px !important;
+									font-weight: 500 !important;
+									text-align: right !important;
+									border-bottom: 1px solid #f0f0f0 !important;
+									text-decoration: none !important;
+									width: 100% !important;
+									box-sizing: border-box !important;
+								}
+								.elementor-nav-menu--dropdown .elementor-item:hover,
+								.elementor-nav-menu--dropdown .elementor-sub-item:hover {
+									background-color: #f9f9f9 !important;
+									color: #291686 !important;
+								}
+								.elementor-nav-menu--dropdown .sub-menu {
+									background-color: #fcfcfc !important;
+									margin: 0 !important;
+								}
+								.elementor-nav-menu--dropdown .sub-menu .elementor-sub-item {
+									padding-right: 45px !important;
+									font-size: 15px !important;
+								}
+								/* Fix for the toggle button position */
+								.elementor-widget-nav-menu {
+									position: static !important;
+								}
+						}
 				</style>
 			<link rel="icon" href="/wp-content/uploads/2026/07/logo-32x32.png" sizes="32x32" />
 <link rel="icon" href="/wp-content/uploads/2026/07/logo-192x192.png" sizes="192x192" />
@@ -253,18 +253,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/07/logo-270x270.png" />
 <meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_defer_js wpr_preconnect_external_domains wpr_oci wpr_minify_css wpr_desktop" />
 <style id="custom-menu-fix">
-/* إصلاح القائمة المنسدلة للجوال */
+/* إصلاح القائمة المنسدلة للجوال - Full Width Hamburger Menu */
 @media (max-width: 1024px) {
     .elementor-nav-menu--dropdown {
         width: 100% !important;
         max-width: 100% !important;
         left: 0 !important;
         right: 0 !important;
-        position: absolute !important;
+        position: fixed !important;
         background-color: #fff !important;
         box-shadow: 0px 8px 16px rgba(0,0,0,0.1) !important;
         z-index: 9999 !important;
-        padding: 10px 0 !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
     }
     
     .elementor-nav-menu--dropdown ul {
@@ -280,12 +281,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     
     .elementor-nav-menu--dropdown a {
-        padding: 15px 20px !important;
+        padding: 15px 25px !important;
         display: block !important;
         width: 100% !important;
         font-size: 16px !important;
         color: #333 !important;
         text-align: right !important;
+        box-sizing: border-box !important;
     }
     
     .elementor-nav-menu--dropdown .sub-menu {
@@ -298,12 +300,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        background-color: transparent !important;
+        border: none !important;
     }
     
     /* إصلاح خلفية القائمة المنسدلة لتكون مثل الصورة */
     .elementor-nav-menu--dropdown.elementor-nav-menu__container {
         background-color: #fff !important;
-        border-radius: 0 0 10px 10px !important;
+        border-radius: 0 !important;
+        border-top: 2px solid #291686 !important;
     }
 }
 </style>
