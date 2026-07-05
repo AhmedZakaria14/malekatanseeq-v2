@@ -1,0 +1,20 @@
+# تفعيل mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # إعادة توجيه الروابط المشفرة إلى الأسماء العربية الصحيحة
+    RewriteRule ^%d9%85%d9%86-%d9%86%d8%ad%d9%86/(.*)$ /من-نحن/$1 [R=301,L]
+    RewriteRule ^%d9%85%d8%b8%d9%84%d8%a7%d8%aa-%d9%88%d8%ac%d9%84%d8%b3%d8%a7%d8%aa/(.*)$ /مظلات-وجلسات/$1 [R=301,L]
+    RewriteRule ^%d8%ac%d9%84%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%ad%d8%af%d9%8a%d9%82%d8%a9/(.*)$ /جلسات-الحديقة/$1 [R=301,L]
+    RewriteRule ^%d8%b4%d9%84%d8%a7%d9%84%d8%a7%d8%aa-%d9%88%d9%86%d9%88%d8%a7%d9%81%d9%8a%d8%b1/(.*)$ /شلالات-ونوافير/$1 [R=301,L]
+    RewriteRule ^%d9%82%d8%b5-%d8%a7%d8%b4%d8%ac%d8%a7%d8%b1-%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d9%8a%d8%a9/(.*)$ /قص-اشجار-احواض-زراعية/$1 [R=301,L]
+    RewriteRule ^%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d9%8a%d8%a9/(.*)$ /احواض-زراعية/$1 [R=301,L]
+    RewriteRule ^%d9%85%d9%85%d8%b1%d8%a7%d8%aa-%d8%ad%d8%ac%d8%b1%d9%8a%d8%a9/(.*)$ /ممرات-حجرية/$1 [R=301,L]
+    RewriteRule ^%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d8%a9-%d8%b5%d9%86%d8%a7%d8%b9%d9%8a%d8%a9/(.*)$ /احواض-زراعة-صناعية/$1 [R=301,L]
+    RewriteRule ^%d8%b4%d8%a8%d9%83%d9%87-%d8%b1%d8%b2%d8%a7%d8%b2/(.*)$ /شبكه-رزاز/$1 [R=301,L]
+    RewriteRule ^%d8%b4%d8%a8%d9%83%d9%87-%d8%b1%d8%a3%d9%8a/(.*)$ /شبكه-رأي/$1 [R=301,L]
+    RewriteRule ^%d8%ba%d8%b1%d9%81-%d8%b2%d8%ac%d8%a7%d8%ac/(.*)$ /غرف-زجاج/$1 [R=301,L]
+    RewriteRule ^%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/(.*)$ /الخدمات/$1 [R=301,L]
+    RewriteRule ^%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/(.*)$ /تواصل-معنا/$1 [R=301,L]
+</IfModule>
