@@ -201,141 +201,166 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<style id="manus-recommended-menu-style">
-    /* Improved Mobile Menu by Manus */
+
+
+
+
+<style id="manus-ultimate-menu-style-v2">
+    /* Ultimate Mobile Menu by Manus - Fixed & Stable V2 */
     @media (max-width: 1024px) {
-        /* Hide default desktop menu */
-        .elementor-nav-menu--main {
+        /* Hide existing problematic mobile elements */
+        .elementor-menu-toggle, 
+        .elementor-nav-menu--dropdown:not(.manus-nav) {
             display: none !important;
+            visibility: hidden !important;
         }
 
-        /* Styling the Toggle Button */
-        .elementor-menu-toggle {
+        /* New Floating Toggle Button - Increased Z-index and visibility */
+        .manus-toggle-btn {
             display: flex !important;
+            position: fixed !important;
+            top: 20px !important;
+            left: 20px !important;
+            width: 50px !important;
+            height: 50px !important;
+            background-color: #291686 !important;
+            color: #ffffff !important;
+            border-radius: 50% !important;
+            z-index: 999999 !important; /* Extremely high z-index */
             align-items: center !important;
             justify-content: center !important;
-            width: 40px !important;
-            height: 40px !important;
-            background-color: #291686 !important;
-            border-radius: 4px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
             cursor: pointer !important;
-            position: relative !important;
-            z-index: 10002 !important;
-            border: none !important;
-        }
-        
-        .elementor-menu-toggle svg {
-            fill: #ffffff !important;
-            width: 22px !important;
-            height: 22px !important;
-        }
-
-        /* The Sidebar Menu Container */
-        .elementor-nav-menu--dropdown.manus-mobile-active {
-            display: block !important;
+            border: 2px solid #ffffff !important;
             visibility: visible !important;
-            opacity: 1 !important;
-            transform: translateX(0) !important;
         }
 
-        .elementor-nav-menu--dropdown {
-            display: block !important;
+        /* The Sidebar Menu */
+        .manus-sidebar {
             position: fixed !important;
             top: 0 !important;
-            right: 0 !important;
-            width: 280px !important;
+            right: -310px !important;
+            width: 300px !important;
             height: 100vh !important;
             background-color: #ffffff !important;
-            z-index: 10001 !important;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
-            transition: transform 0.3s ease-in-out !important;
-            transform: translateX(100%) !important; /* Slide out to the right */
-            padding: 70px 0 20px 0 !important;
-            overflow-y: auto !important;
-            direction: rtl !important;
-        }
-
-        /* Menu Items */
-        .elementor-nav-menu--dropdown ul.elementor-nav-menu {
+            z-index: 1000000 !important;
+            transition: all 0.3s ease-out !important;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.3) !important;
             display: flex !important;
             flex-direction: column !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            list-style: none !important;
-        }
-
-        .elementor-nav-menu--dropdown li.menu-item {
-            width: 100% !important;
-            border-bottom: 1px solid #f0f0f0 !important;
-            position: relative !important;
-        }
-
-        .elementor-nav-menu--dropdown li.menu-item a {
-            display: block !important;
-            padding: 15px 20px !important;
-            color: #333333 !important;
-            font-size: 16px !important;
-            font-weight: 600 !important;
-            text-decoration: none !important;
+            overflow-y: auto !important;
+            direction: rtl !important;
             text-align: right !important;
-            transition: all 0.2s !important;
+            visibility: visible !important;
         }
 
-        .elementor-nav-menu--dropdown li.menu-item a:hover {
-            background-color: #f9f9f9 !important;
+        .manus-sidebar.open {
+            right: 0 !important;
+        }
+
+        /* Sidebar Header */
+        .manus-sidebar-header {
+            padding: 25px 20px !important;
+            background-color: #291686 !important;
+            color: #ffffff !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+        }
+
+        .manus-close-btn {
+            font-size: 30px !important;
+            line-height: 1 !important;
+            cursor: pointer !important;
+            padding: 5px !important;
+        }
+
+        /* Menu Content */
+        .manus-menu-list {
+            list-style: none !important;
+            padding: 10px 0 !important;
+            margin: 0 !important;
+        }
+
+        .manus-menu-item {
+            border-bottom: 1px solid #f0f0f0 !important;
+        }
+
+        .manus-menu-item a {
+            display: flex !important;
+            padding: 18px 20px !important;
+            color: #333333 !important;
+            text-decoration: none !important;
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            transition: background 0.2s !important;
+        }
+
+        .manus-menu-item a:active, .manus-menu-item a:hover {
+            background-color: #f5f5f5 !important;
             color: #291686 !important;
         }
 
-        /* Dropdown / Sub-menu Handling */
-        .elementor-nav-menu--dropdown .sub-menu {
-            display: none !important; /* Hidden by default */
+        /* Sub-menu (Dropdown) */
+        .manus-submenu {
+            display: none !important;
             background-color: #fcfcfc !important;
-            padding: 0 !important;
             list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            border-top: 1px solid #f0f0f0 !important;
         }
 
-        .elementor-nav-menu--dropdown .sub-menu.open {
+        .manus-submenu.open {
             display: block !important;
         }
 
-        .elementor-nav-menu--dropdown .sub-menu li a {
-            padding-right: 40px !important;
+        .manus-submenu li a {
+            padding: 15px 40px 15px 20px !important;
+            font-weight: 500 !important;
             font-size: 15px !important;
-            font-weight: 400 !important;
+            border-bottom: 1px solid #f5f5f5 !important;
         }
 
-        /* Indicator for Dropdowns */
-        .menu-item-has-children > a::after {
-            content: "BC" !important;
-            font-size: 10px !important;
-            margin-right: 8px !important;
-            display: inline-block !important;
-            transition: transform 0.2s !important;
-            float: left !important;
+        /* Dropdown Arrow */
+        .manus-arrow-icon {
+            width: 12px !important;
+            height: 12px !important;
+            border-left: 2px solid #ccc !important;
+            border-bottom: 2px solid #ccc !important;
+            transform: rotate(-45deg) !important;
+            transition: transform 0.3s !important;
+            margin-left: 5px !important;
         }
 
-        .menu-item-has-children.active > a::after {
-            transform: rotate(180deg) !important;
+        .manus-arrow.active .manus-arrow-icon {
+            transform: rotate(135deg) !important;
+            border-color: #291686 !important;
         }
 
-        /* Overlay background */
-        .manus-menu-overlay {
+        /* Overlay */
+        .manus-overlay {
             position: fixed !important;
             top: 0 !important;
             left: 0 !important;
             width: 100% !important;
             height: 100% !important;
-            background: rgba(0,0,0,0.5) !important;
-            z-index: 10000 !important;
+            background: rgba(0,0,0,0.7) !important;
+            z-index: 999999 !important;
             display: none !important;
+            backdrop-filter: blur(4px) !important;
         }
-        
-        .manus-menu-overlay.show {
+
+        .manus-overlay.show {
             display: block !important;
         }
 
-        body.manus-no-scroll {
+        body.manus-locked {
             overflow: hidden !important;
+            touch-action: none !important;
         }
     }
 </style>
@@ -752,58 +777,106 @@ var ekit_config = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"fba5024678"};
 <script>var rocket_beacon_data = {"ajax_url":"https:\/\/zahraty.com\/wp-admin\/admin-ajax.php","nonce":"46d0e3b892","url":"https:\/\/zahraty.com\/author\/abdoelkbeer","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script>
 
 
-<script id="manus-recommended-menu-js">
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtn = document.querySelector('.elementor-menu-toggle');
-    const navMenu = document.querySelector('nav.elementor-nav-menu--dropdown');
-    
-    // Create overlay if not exists
-    let overlay = document.querySelector('.manus-menu-overlay');
-    if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.className = 'manus-menu-overlay';
-        document.body.appendChild(overlay);
-    }
 
-    if (toggleBtn && navMenu) {
-        // Function to toggle menu
-        const toggleMenu = (e) => {
-            if (e) e.preventDefault();
-            const isActive = navMenu.classList.toggle('manus-mobile-active');
-            overlay.classList.toggle('show', isActive);
-            document.body.classList.toggle('manus-no-scroll', isActive);
+
+
+
+<script id="manus-ultimate-menu-js-v2">
+(function() {
+    function initManusMenu() {
+        if (window.innerWidth > 1024) {
+            // Remove mobile elements if screen resized to desktop
+            const elements = ['.manus-toggle-btn', '.manus-overlay', '.manus-sidebar'];
+            elements.forEach(sel => {
+                const el = document.querySelector(sel);
+                if (el) el.remove();
+            });
+            document.body.classList.remove('manus-locked');
+            return;
+        }
+
+        // Create UI elements if they don't exist
+        if (!document.querySelector('.manus-toggle-btn')) {
+            const toggle = document.createElement('div');
+            toggle.className = 'manus-toggle-btn';
+            toggle.setAttribute('aria-label', 'Open Menu');
+            toggle.innerHTML = '<svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>';
+            document.body.appendChild(toggle);
+
+            const overlay = document.createElement('div');
+            overlay.className = 'manus-overlay';
+            document.body.appendChild(overlay);
+
+            const sidebar = document.createElement('div');
+            sidebar.className = 'manus-sidebar';
+            sidebar.innerHTML = `
+                <div class="manus-sidebar-header">
+                    <span style="font-weight:bold; font-size:18px;">قائمة التنقل</span>
+                    <span class="manus-close-btn">&times;</span>
+                </div>
+                <ul class="manus-menu-list">
+                    <li class="manus-menu-item"><a href="/">الرئيسية</a></li>
+                    <li class="manus-menu-item"><a href="/من-نحن/">من نحن</a></li>
+                    <li class="manus-menu-item has-sub">
+                        <a href="#" class="manus-arrow">الخدمات <span class="manus-arrow-icon"></span></a>
+                        <ul class="manus-submenu">
+                            <li><a href="/مظلات-وجلسات/">مظلات وجلسات</a></li>
+                            <li><a href="/جلسات-الحديقة/">تنسيق حدائق - ثيل طبيعي</a></li>
+                            <li><a href="/شلالات-ونوافير/">شلالات ونوافير</a></li>
+                            <li><a href="/قص-اشجار-احواض-زراعية/">قص اشجار</a></li>
+                            <li><a href="/احواض-زراعية/">احواض زراعية طبيعية</a></li>
+                            <li><a href="/ممرات-حجرية/">ممرات حجرية</a></li>
+                            <li><a href="/احواض-زراعة-صناعية/">احواض زراعة صناعية</a></li>
+                            <li><a href="/شبكه-رزاز/">شبكة رذاذ</a></li>
+                            <li><a href="/شبكه-رأي/">شبكه ري</a></li>
+                            <li><a href="/غرف-زجاج/">غرف زجاج</a></li>
+                        </ul>
+                    </li>
+                    <li class="manus-menu-item"><a href="/تواصل-معنا/">تواصل معنا</a></li>
+                </ul>
+                <div style="padding: 20px; text-align: center; margin-top: auto;">
+                    <a href="tel:0532391307" style="background: #291686; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold;">اتصل بنا الآن</a>
+                </div>
+            `;
+            document.body.appendChild(sidebar);
+
+            const toggleFn = (e) => {
+                if (e) e.preventDefault();
+                const isOpen = sidebar.classList.toggle('open');
+                overlay.classList.toggle('show', isOpen);
+                document.body.classList.toggle('manus-locked', isOpen);
+            };
+
+            toggle.addEventListener('click', toggleFn);
+            sidebar.querySelector('.manus-close-btn').addEventListener('click', toggleFn);
+            overlay.addEventListener('click', toggleFn);
+
+            // Submenu toggle
+            sidebar.querySelector('.has-sub > a').addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.toggle('active');
+                this.nextElementSibling.classList.toggle('open');
+            });
             
-            // Change toggle icon color or shape if needed
-        };
-
-        toggleBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-
-        // Handle Sub-menus (Dropdowns)
-        const parentItems = navMenu.querySelectorAll('.menu-item-has-children > a');
-        parentItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                const subMenu = this.nextElementSibling;
-                if (subMenu && subMenu.classList.contains('sub-menu')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const isOpen = subMenu.classList.toggle('open');
-                    this.parentElement.classList.toggle('active', isOpen);
-                }
+            // Auto-close on link click
+            sidebar.querySelectorAll('a:not(.manus-arrow)').forEach(link => {
+                link.addEventListener('click', () => {
+                    sidebar.classList.remove('open');
+                    overlay.classList.remove('show');
+                    document.body.classList.remove('manus-locked');
+                });
             });
-        });
-
-        // Close menu on link click (if not a parent item)
-        const allLinks = navMenu.querySelectorAll('li.menu-item:not(.menu-item-has-children) > a');
-        allLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('manus-mobile-active');
-                overlay.classList.remove('show');
-                document.body.classList.remove('manus-no-scroll');
-            });
-        });
+        }
     }
-});
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initManusMenu);
+    } else {
+        initManusMenu();
+    }
+    window.addEventListener('resize', initManusMenu);
+})();
 </script>
 </body>
 </html>
