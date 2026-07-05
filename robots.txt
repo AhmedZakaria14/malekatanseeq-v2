@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 
-Sitemap: /library-index.xml
+Sitemap: https://zahraty.com/library-index.xml

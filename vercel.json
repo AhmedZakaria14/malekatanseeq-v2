@@ -1,87 +1,22 @@
 {
   "rewrites": [
-    {
-      "source": "/comments/feed/index.html",
-      "destination": "/comments/feed/"
-    },
-    {
-      "source": "/feed/index.html",
-      "destination": "/feed/"
-    },
-    {
-      "source": "/wp-json/index.html",
-      "destination": "/wp-json/"
-    },
-    {
-      "source": "/xmlrpc.php/index.html",
-      "destination": "/xmlrpc.php/"
-    }
+    { "source": "/من-نحن/", "destination": "/من-نحن/index.html" },
+    { "source": "/الخدمات/", "destination": "/الخدمات/index.html" },
+    { "source": "/تواصل-معنا/", "destination": "/تواصل-معنا/index.html" },
+    { "source": "/مظلات-وجلسات/", "destination": "/مظلات-وجلسات/index.html" },
+    { "source": "/جلسات-الحديقة/", "destination": "/جلسات-الحديقة/index.html" },
+    { "source": "/شلالات-ونوافير/", "destination": "/شلالات-ونوافير/index.html" },
+    { "source": "/قص-اشجار-احواض-زراعية/", "destination": "/قص-اشجار-احواض-زراعية/index.html" },
+    { "source": "/احواض-زراعية/", "destination": "/احواض-زراعية/index.html" },
+    { "source": "/ممرات-حجرية/", "destination": "/ممرات-حجرية/index.html" },
+    { "source": "/احواض-زراعة-صناعية/", "destination": "/احواض-زراعة-صناعية/index.html" },
+    { "source": "/شبكه-رزاز/", "destination": "/شبكه-رزاز/index.html" },
+    { "source": "/شبكه-رأي/", "destination": "/شبكه-رأي/index.html" },
+    { "source": "/غرف-زجاج/", "destination": "/غرف-زجاج/index.html" }
   ],
   "redirects": [
-    {
-      "source": "/%d9%85%d9%86-%d9%86%d8%ad%d9%86/",
-      "destination": "/من-نحن/",
-      "permanent": true
-    },
-    {
-      "source": "/%d9%85%d8%b8%d9%84%d8%a7%d8%aa-%d9%88%d8%ac%d9%84%d8%b3%d8%a7%d8%aa/",
-      "destination": "/مظلات-وجلسات/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%ac%d9%84%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%ad%d8%af%d9%8a%d9%82%d8%a9/",
-      "destination": "/جلسات-الحديقة/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%b4%d9%84%d8%a7%d9%84%d8%a7%d8%aa-%d9%88%d9%86%d9%88%d8%a7%d9%81%d9%8a%d8%b1/",
-      "destination": "/شلالات-ونوافير/",
-      "permanent": true
-    },
-    {
-      "source": "/%d9%82%d8%b5-%d8%a7%d8%b4%d8%ac%d8%a7%d8%b1-%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d9%8a%d8%a9/",
-      "destination": "/قص-اشجار-احواض-زراعية/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d9%8a%d8%a9/",
-      "destination": "/احواض-زراعية/",
-      "permanent": true
-    },
-    {
-      "source": "/%d9%85%d9%85%d8%b1%d8%a7%d8%aa-%d8%ad%d8%ac%d8%b1%d9%8a%d8%a9/",
-      "destination": "/ممرات-حجرية/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%a7%d8%ad%d9%88%d8%a7%d8%b6-%d8%b2%d8%b1%d8%a7%d8%b9%d8%a9-%d8%b5%d9%86%d8%a7%d8%b9%d9%8a%d8%a9/",
-      "destination": "/احواض-زراعة-صناعية/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%b4%d8%a8%d9%83%d9%87-%d8%b1%d8%b2%d8%a7%d8%b2/",
-      "destination": "/شبكه-رزاز/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%b4%d8%a8%d9%83%d9%87-%d8%b1%d8%a3%d9%8a/",
-      "destination": "/شبكه-رأي/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%ba%d8%b1%d9%81-%d8%b2%d8%ac%d8%a7%d8%ac/",
-      "destination": "/غرف-زجاج/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/",
-      "destination": "/الخدمات/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/",
-      "destination": "/تواصل-معنا/",
-      "permanent": true
-    }
+    { "source": "/%d9%85%d9%86-%d9%86%d8%ad%d9%86/", "destination": "/من-نحن/", "permanent": true },
+    { "source": "/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/", "destination": "/الخدمات/", "permanent": true },
+    { "source": "/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/", "destination": "/تواصل-معنا/", "permanent": true }
   ]
 }
