@@ -165,7 +165,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/wp-content/uploads/2026/06/cropped-WhatsApp_Image_2026-06-03_at_2.24.32_PM__1_-removebg-preview-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/wp-content/uploads/2026/06/cropped-WhatsApp_Image_2026-06-03_at_2.24.32_PM__1_-removebg-preview-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2026/06/cropped-WhatsApp_Image_2026-06-03_at_2.24.32_PM__1_-removebg-preview-270x270.png" />
-<meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_defer_js wpr_minify_css wpr_desktop" /></head>
+<meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_defer_js wpr_minify_css wpr_desktop" />
+<style id="custom-menu-fix">
+/* إصلاح القائمة المنسدلة للجوال */
+@media (max-width: 1024px) {
+    .elementor-nav-menu--dropdown {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: absolute !important;
+        background-color: #fff !important;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1) !important;
+        z-index: 9999 !important;
+        padding: 10px 0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown ul {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown li {
+        width: 100% !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+    
+    .elementor-nav-menu--dropdown a {
+        padding: 15px 20px !important;
+        display: block !important;
+        width: 100% !important;
+        font-size: 16px !important;
+        color: #333 !important;
+        text-align: right !important;
+    }
+    
+    .elementor-nav-menu--dropdown .sub-menu {
+        background-color: #f9f9f9 !important;
+        padding-right: 20px !important;
+    }
+    
+    /* جعل زر القائمة (الهمبرجر) متناسقاً */
+    .elementor-menu-toggle {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* إصلاح خلفية القائمة المنسدلة لتكون مثل الصورة */
+    .elementor-nav-menu--dropdown.elementor-nav-menu__container {
+        background-color: #fff !important;
+        border-radius: 0 0 10px 10px !important;
+    }
+}
+</style>
+
+</head>
 
 <body data-rsssl=1 class="rtl wp-singular post-template-default single single-post postid-243 single-format-standard wp-embed-responsive wp-theme-kadence footer-on-bottom hide-focus-outline link-style-standard content-title-style-normal content-width-narrow content-style-boxed content-vertical-padding-show non-transparent-header mobile-non-transparent-header kadence-elementor-colors elementor-default elementor-kit-11 elementor-page-65">
 <!-- Google Tag Manager (noscript) -->
