@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*?p=
 
 Sitemap: https://malekatanseeq-v2.vercel.app/sitemap.xml
