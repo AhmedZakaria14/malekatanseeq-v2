@@ -410,6 +410,7 @@ def replace_contact_and_legacy_data() -> None:
         ("0536759014", LOCAL_PHONE),
     )
     visible_content_replacements = (
+        (r"zahraty\.com", r"malekatanseeq-v2\.vercel\.app"),
         ("https://zahraty.com", BASE_URL),
         ("http://zahraty.com", BASE_URL),
         ("zahraty.com", "malekatanseeq-v2.vercel.app"),
