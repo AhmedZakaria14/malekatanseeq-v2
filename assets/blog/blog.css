@@ -4,4 +4,4 @@
 .maleka-blog{line-height:1.6}.blog-banner h1,.article-banner h1{color:#fff!important}.blog-banner p,.article-banner p{color:#fff!important}
 
 /* mobile-card-descriptions: تظهر أوصاف البطاقات خارج الصورة في الهاتف. */
-@media(max-width:700px){.cards .post-copy>span{display:-webkit-box;overflow:hidden;margin:9px 0 14px;color:#6b796c;font-size:13px;line-height:1.85;-webkit-line-clamp:3;-webkit-box-orient:vertical}.cards .post-copy{min-height:190px}.cards .post-copy .read-more{margin-top:auto}}
+@media(max-width:700px){.cards .post-copy{display:block!important;min-height:190px;padding:20px;background:#fff}.cards .post-copy>span{display:-webkit-box!important;overflow:hidden;margin:9px 0 14px;color:#6b796c;font-size:13px;line-height:1.85;-webkit-line-clamp:3;-webkit-box-orient:vertical}.cards .post-copy .read-more{display:block;margin-top:12px}}
