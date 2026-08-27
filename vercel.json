@@ -1,53 +1,184 @@
 {
   "rewrites": [
-    { "source": "/من-نحن/", "destination": "/من-نحن/index.html" },
-    { "source": "/الخدمات/", "destination": "/الخدمات/index.html" },
-    { "source": "/تواصل-معنا/", "destination": "/تواصل-معنا/index.html" },
-    { "source": "/مظلات-وجلسات/", "destination": "/مظلات-وجلسات/index.html" },
-    { "source": "/جلسات-الحديقة/", "destination": "/جلسات-الحديقة/index.html" },
-    { "source": "/شلالات-ونوافير/", "destination": "/شلالات-ونوافير/index.html" },
-    { "source": "/قص-اشجار-احواض-زراعية/", "destination": "/قص-اشجار-احواض-زراعية/index.html" },
-    { "source": "/احواض-زراعية/", "destination": "/احواض-زراعية/index.html" },
-    { "source": "/ممرات-حجرية/", "destination": "/ممرات-حجرية/index.html" },
-    { "source": "/احواض-زراعة-صناعية/", "destination": "/احواض-زراعة-صناعية/index.html" },
-    { "source": "/شبكه-رزاز/", "destination": "/شبكه-رزاز/index.html" },
-    { "source": "/شبكه-رأي/", "destination": "/شبكه-رأي/index.html" },
-    { "source": "/غرف-زجاج/", "destination": "/غرف-زجاج/index.html" }
+    {
+      "source": "/من-نحن/",
+      "destination": "/من-نحن/index.html"
+    },
+    {
+      "source": "/الخدمات/",
+      "destination": "/الخدمات/index.html"
+    },
+    {
+      "source": "/تواصل-معنا/",
+      "destination": "/تواصل-معنا/index.html"
+    },
+    {
+      "source": "/مظلات-وجلسات/",
+      "destination": "/مظلات-وجلسات/index.html"
+    },
+    {
+      "source": "/جلسات-الحديقة/",
+      "destination": "/جلسات-الحديقة/index.html"
+    },
+    {
+      "source": "/شلالات-ونوافير/",
+      "destination": "/شلالات-ونوافير/index.html"
+    },
+    {
+      "source": "/قص-اشجار-احواض-زراعية/",
+      "destination": "/قص-اشجار-احواض-زراعية/index.html"
+    },
+    {
+      "source": "/احواض-زراعية/",
+      "destination": "/احواض-زراعية/index.html"
+    },
+    {
+      "source": "/ممرات-حجرية/",
+      "destination": "/ممرات-حجرية/index.html"
+    },
+    {
+      "source": "/احواض-زراعة-صناعية/",
+      "destination": "/احواض-زراعة-صناعية/index.html"
+    },
+    {
+      "source": "/شبكه-رزاز/",
+      "destination": "/شبكه-رزاز/index.html"
+    },
+    {
+      "source": "/شبكه-رأي/",
+      "destination": "/شبكه-رأي/index.html"
+    },
+    {
+      "source": "/غرف-زجاج/",
+      "destination": "/غرف-زجاج/index.html"
+    },
+    {
+      "source": "/المدونة/",
+      "destination": "/المدونة/index.html"
+    },
+    {
+      "source": "/مقالات/خدمات-تنسيق-حدائق-بالرياض/",
+      "destination": "/مقالات/خدمات-تنسيق-حدائق-بالرياض/index.html"
+    },
+    {
+      "source": "/مقالات/شركة-تنسيق-حدائق-بالرياض/",
+      "destination": "/مقالات/شركة-تنسيق-حدائق-بالرياض/index.html"
+    },
+    {
+      "source": "/مقالات/تصميم-حدائق-بالرياض/",
+      "destination": "/مقالات/تصميم-حدائق-بالرياض/index.html"
+    },
+    {
+      "source": "/مقالات/منسق-حدائق-الرياض/",
+      "destination": "/مقالات/منسق-حدائق-الرياض/index.html"
+    },
+    {
+      "source": "/مقالات/تنسيق-حدائق-منزلية-بالرياض/",
+      "destination": "/مقالات/تنسيق-حدائق-منزلية-بالرياض/index.html"
+    },
+    {
+      "source": "/مقالات/محلات-تنسيق-حدائق-بالرياض/",
+      "destination": "/مقالات/محلات-تنسيق-حدائق-بالرياض/index.html"
+    },
+    {
+      "source": "/مقالات/تنسيق-حدائق-منزلية/",
+      "destination": "/مقالات/تنسيق-حدائق-منزلية/index.html"
+    },
+    {
+      "source": "/مقالات/تنسيق-احواش/",
+      "destination": "/مقالات/تنسيق-احواش/index.html"
+    },
+    {
+      "source": "/مقالات/مصمم-حدائق-منزلية/",
+      "destination": "/مقالات/مصمم-حدائق-منزلية/index.html"
+    },
+    {
+      "source": "/مقالات/تنفيذ-حدائق-منزلية/",
+      "destination": "/مقالات/تنفيذ-حدائق-منزلية/index.html"
+    }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/الرئيسية/", "destination": "/", "permanent": true },
-    { "source": "/%d9%85%d9%86-%d9%86%d8%ad%d9%86/", "destination": "/من-نحن/", "permanent": true },
-    { "source": "/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/", "destination": "/الخدمات/", "permanent": true },
-    { "source": "/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/", "destination": "/تواصل-معنا/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/الرئيسية/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/%d9%85%d9%86-%d9%86%d8%ad%d9%86/",
+      "destination": "/من-نحن/",
+      "permanent": true
+    },
+    {
+      "source": "/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/",
+      "destination": "/الخدمات/",
+      "permanent": true
+    },
+    {
+      "source": "/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/",
+      "destination": "/تواصل-معنا/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
       ]
     },
     {
       "source": "/(.*).(css|js|jpg|jpeg|png|webp|svg|woff|woff2|ttf)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     }
   ]
