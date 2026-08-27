@@ -471,7 +471,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     }
 </style>
   <!-- blog-shared-chrome -->
-  <link rel="stylesheet" href="/assets/blog/blog.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=unified-chrome-2">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"تنسيق احواش مريحة تناسب استخدام البيت طوال العام","description":"حلول تنسيق أحواش مريحة تجعل حوش البيت مساحة مناسبة للاستخدام اليومي والجلوس والضيافة طوال العام.","image":"https://www.landscapingriyadh.com/assets/blog/courtyard-garden.webp","datePublished":"2026-08-27","dateModified":"2026-08-27","inLanguage":"ar-SA","keywords":"تنسيق احواش, تنسيق حدائق احواش, تنسيق حوش البيت, تنسيق حوش البيت صغير, تصميم احواش فلل","mainEntityOfPage":"https://www.landscapingriyadh.com/مقالات/تنسيق-احواش/","author":{"@type":"Organization","name":"ملكة لتنسيق الحدائق"},"publisher":{"@type":"Organization","name":"ملكة لتنسيق الحدائق","logo":{"@type":"ImageObject","url":"https://www.landscapingriyadh.com/wp-content/uploads/2026/07/logo.png"}}}</script>
 </head>
 <body class="rtl home wp-singular page-template-default page page-id-95 wp-embed-responsive wp-theme-kadence footer-on-bottom hide-focus-outline link-style-standard content-title-style-hide content-width-fullwidth content-style-unboxed content-vertical-padding-hide non-transparent-header mobile-non-transparent-header kadence-elementor-colors elementor-default elementor-kit-11 elementor-page elementor-page-95 maleka-blog">
@@ -877,6 +877,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					</div>
 		</section>
 				</footer>
+<script>
+document.querySelectorAll('.elementor-menu-toggle').forEach((toggle) => {
+  const menu = toggle.parentElement?.querySelector('.elementor-nav-menu--dropdown');
+  if (!menu) return;
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu.setAttribute('aria-hidden', String(open));
+    menu.style.display = open ? 'none' : 'block';
+  });
+});
+</script>
 <script>
 document.querySelectorAll('.elementor-menu-toggle').forEach((toggle) => {
   const menu = toggle.parentElement?.querySelector('.elementor-nav-menu--dropdown');
