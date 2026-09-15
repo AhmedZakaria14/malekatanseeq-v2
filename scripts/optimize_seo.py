@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_URL = "https://malekatanseeq-v2.vercel.app"
+BASE_URL = "https://www.landscapingriyadh.com"
 BRAND = "ملكة لتنسيق الحدائق"
 LOCAL_PHONE = "0500000000"
 INTERNATIONAL_PHONE = "966500000000"
@@ -170,7 +170,7 @@ PAGES = {
         "service": "تصميم وتركيب الغرف الزجاجية",
     },
     "2025/11/16/أهمية-استخدام-النباتات-المحلية-في-تصم/index.html": {
-        "route": "/2025/11/16/أهمية-استخدام-النباتات-المحلية-في-تصم/",
+        "route": "/مقالات/مميزات-تركيب-الثيل-الطبيعي/",
         "title": "مميزات تركيب الثيل الطبيعي للحدائق بالرياض | ملكة",
         "description": (
             "تعرف على مميزات الثيل الطبيعي للحدائق، وكيفية اختياره وتركيبه "
@@ -180,7 +180,7 @@ PAGES = {
         "type": "article",
     },
     "2025/11/16/الفرق-بين-العشب-الطبيعي-والعشب-الصناع/index.html": {
-        "route": "/2025/11/16/الفرق-بين-العشب-الطبيعي-والعشب-الصناع/",
+        "route": "/مقالات/أهمية-تنسيق-الحدائق-في-جمال-المنزل/",
         "title": "أهمية تنسيق الحدائق في جمال المنزل | ملكة",
         "description": (
             "تعرف على أهمية تنسيق الحدائق في تحسين جمال المنزل ورفع قيمة العقار، "
@@ -190,7 +190,7 @@ PAGES = {
         "type": "article",
     },
     "2025/11/16/تنسيق-اللاندسكيب-ودوره-في-تحسين-جودة-ا/index.html": {
-        "route": "/2025/11/16/تنسيق-اللاندسكيب-ودوره-في-تحسين-جودة-ا/",
+        "route": "/مقالات/الشلالات-والنوافير-وفخامة-الحدائق/",
         "title": "الشلالات والنوافير وفخامة الحدائق | ملكة",
         "description": (
             "دليل لأهمية الشلالات والنوافير في تصميم الحدائق، وأبرز الأنواع "
@@ -459,12 +459,6 @@ def write_supporting_files() -> None:
     (ROOT / "robots.txt").write_text(
         "User-agent: *\n"
         "Allow: /\n"
-        "Disallow: /wp-admin/\n"
-        "Disallow: /wp-json/\n"
-        "Disallow: /xmlrpc.php/\n"
-        "Disallow: /feed/\n"
-        "Disallow: /comments/feed/\n"
-        "Disallow: /*?p=\n\n"
         f"Sitemap: {BASE_URL}/sitemap.xml\n",
         encoding="utf-8",
     )

@@ -1,6 +1,154 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "attachment_id"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "author"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "feed"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "rest_route"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "p"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "attachment_id"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "author"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "feed"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/index.php",
+      "has": [
+        {
+          "type": "query",
+          "key": "rest_route"
+        }
+      ],
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/comments/:path*",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/api/legacy"
+    },
+    {
+      "source": "/2025/:path*",
+      "destination": "/api/legacy"
+    },
+    {
       "source": "/من-نحن/",
       "destination": "/من-نحن/index.html"
     },
@@ -95,9 +243,51 @@
     {
       "source": "/مقالات/تنفيذ-حدائق-منزلية/",
       "destination": "/مقالات/تنفيذ-حدائق-منزلية/index.html"
+    },
+    {
+      "source": "/مقالات/مميزات-تركيب-الثيل-الطبيعي/",
+      "destination": "/مقالات/مميزات-تركيب-الثيل-الطبيعي/index.html"
+    },
+    {
+      "source": "/مقالات/أهمية-تنسيق-الحدائق-في-جمال-المنزل/",
+      "destination": "/مقالات/أهمية-تنسيق-الحدائق-في-جمال-المنزل/index.html"
+    },
+    {
+      "source": "/مقالات/الشلالات-والنوافير-وفخامة-الحدائق/",
+      "destination": "/مقالات/الشلالات-والنوافير-وفخامة-الحدائق/index.html"
     }
   ],
   "redirects": [
+    {
+      "source": "/2025/11/16/أهمية-استخدام-النباتات-المحلية-في-تصم/",
+      "destination": "/مقالات/مميزات-تركيب-الثيل-الطبيعي/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/11/16/الفرق-بين-العشب-الطبيعي-والعشب-الصناع/",
+      "destination": "/مقالات/أهمية-تنسيق-الحدائق-في-جمال-المنزل/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/11/16/تنسيق-اللاندسكيب-ودوره-في-تحسين-جودة-ا/",
+      "destination": "/مقالات/الشلالات-والنوافير-وفخامة-الحدائق/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/11/16/أهمية-استخدام-النباتات-المحلية-في-تصم/index.html",
+      "destination": "/مقالات/مميزات-تركيب-الثيل-الطبيعي/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/11/16/الفرق-بين-العشب-الطبيعي-والعشب-الصناع/index.html",
+      "destination": "/مقالات/أهمية-تنسيق-الحدائق-في-جمال-المنزل/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/11/16/تنسيق-اللاندسكيب-ودوره-في-تحسين-جودة-ا/index.html",
+      "destination": "/مقالات/الشلالات-والنوافير-وفخامة-الحدائق/",
+      "statusCode": 301
+    },
     {
       "source": "/index.html",
       "destination": "/",
@@ -106,21 +296,6 @@
     {
       "source": "/الرئيسية/",
       "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/%d9%85%d9%86-%d9%86%d8%ad%d9%86/",
-      "destination": "/من-نحن/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/",
-      "destination": "/الخدمات/",
-      "permanent": true
-    },
-    {
-      "source": "/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/",
-      "destination": "/تواصل-معنا/",
       "permanent": true
     }
   ],
