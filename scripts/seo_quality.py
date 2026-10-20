@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the static site's SEO structure and optimize existing image bytes."""
 import argparse
+import hashlib
 import io
 import json
 import re
@@ -25,6 +26,10 @@ def local_path(src):
 def optimize():
     from PIL import Image
     saved, count, sizes = 0, 0, {}
+    manifest_path = ROOT / "scripts/optimized-images.json"
+    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    def blob_hash(data):
+        return hashlib.sha1(b"blob " + str(len(data)).encode() + bytes([0]) + data).hexdigest()
     for folder in ("assets", "wp-content/uploads"):
         for path in sorted((ROOT / folder).rglob("*")):
             if path.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
@@ -33,6 +38,9 @@ def optimize():
                 with Image.open(path) as image:
                     sizes[path.resolve()] = image.size
                     original = path.read_bytes()
+                    relative = str(path.relative_to(ROOT))
+                    if manifest.get(relative) == blob_hash(original):
+                        continue
                     if len(original) <= 100000 or getattr(image, "is_animated", False):
                         continue
                     output = io.BytesIO()
@@ -70,6 +78,9 @@ def optimize():
         updated = re.sub(r"<img\b[^>]*>", image_tag, source, flags=re.I)
         if updated != source:
             page.write_text(updated)
+    for path in sizes:
+        manifest[str(path.relative_to(ROOT))] = blob_hash(path.read_bytes())
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + chr(10))
     return {"images_optimized": count, "bytes_saved": saved}
 
 class Inspector(HTMLParser):
