@@ -18,3 +18,15 @@
     RewriteRule ^%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa/(.*)$ /الخدمات/$1 [R=301,L]
     RewriteRule ^%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/(.*)$ /تواصل-معنا/$1 [R=301,L]
 </IfModule>
+
+# Security response headers for Apache and LiteSpeed hosting.
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://scripts.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://*.bing.com https://googleads.g.doubleclick.net; frame-src 'self' https://maps.google.com https://www.google.com https://www.googletagmanager.com; media-src 'self' data: https:; form-action 'self'; upgrade-insecure-requests"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+AddType text/plain .txt
+AddType text/html .html
+AddType application/xml .xml
+AddDefaultCharset UTF-8
